@@ -16,8 +16,16 @@
         }
     },
 
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/eoko/zf-console"
+        }
+    ],
+
     "require": {
         "php": ">=5.5",
+        "eoko/zf-console": "dev-master",
         "zendframework/zend-stdlib": "~2.5",
         "zendframework/zend-console": "~2.5",
         "zendframework/zend-servicemanager": "~2.5",
