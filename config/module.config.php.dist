@@ -1,0 +1,9 @@
+<?php
+
+return [
+    'eoko' => [
+        'mandrill' => [
+            'apiKey' => 's3cret'
+        ],
+    ],
+];
