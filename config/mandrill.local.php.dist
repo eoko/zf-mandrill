@@ -3,8 +3,26 @@
 return [
     'eoko' => [
         'mandrill' => [
-            'apiKey' => 's3cret',
-            'subaccount' => 'sub',
+            'apiKey' => 'you_api_key',
+            'default' => [
+                // Leave blank if no subaccount
+                'subaccount' => 'my_subaccount',
+
+                // Leave blank if no default from email
+                'from_email' => 'jane@doe.com',
+
+                // Leave blank if no from name
+                'from_name' => 'Jane Doe',
+            ],
+
+            // Boolean, true if you want to send async email
+            'async' => false,
+
+            // String, your Mandrill ip pool
+            'ip_pool' => null,
+
+            // Date, scheduled email
+            'send_at' => null,
         ],
     ],
 ];
