@@ -12,7 +12,13 @@
 
 ```PHP
 
-    // -v or --verbose will display the current key
-    php public/index.php mandrill check -v
+    // validate the current key
+    php public/index.php mandrill apikey validation
+
+    // validate the current subaccount
+    php public/index.php mandrill subaccount validation
+
+    // check all
+    php public/index.php mandrill check
     
 ```
