@@ -1,6 +1,6 @@
 {
-    "name": "eoko/console",
-    "description": " ",
+    "name": "eoko/zf-mandrill",
+    "description": "zf-mandrill is a ZF2 wrapper for the Mandrill API.",
     "license": "BSD-3-Clause",
     "keywords": [
         "eoko",
@@ -12,7 +12,7 @@
 
     "autoload": {
         "psr-4": {
-            "Eoko\\Console\\": "src/"
+            "Eoko\\Mandrill\\": "src/"
         }
     },
 
@@ -29,25 +29,16 @@
         "zendframework/zend-stdlib": "~2.5",
         "zendframework/zend-console": "~2.5",
         "zendframework/zend-servicemanager": "~2.5",
-        "mandrill/mandrill": "dev-master",
-        "zendframework/zftool": "dev-master",
-        "zendframework/zenddiagnostics": "dev-master"
+        "mandrill/mandrill": "dev-master"
     },
 
     "minimum-stability": "dev",
 
     "prefer-stable": true,
 
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.5-dev",
-            "dev-develop": "2.6-dev"
-        }
-    },
-
     "autoload-dev": {
         "psr-4": {
-            "ZendTest\\Console\\": "test/"
+            "Eoko\\MandrillTest\\": "test/"
         }
     },
 
@@ -60,6 +51,7 @@
         "zendframework/zend-json": "~2.5",
         "zendframework/zend-validator": "~2.5",
         "phpunit/phpunit": "^5.0@dev",
-        "zendframework/zend-servicemanager": "^2.5@dev"
+        "zendframework/zftool": "dev-master",
+        "zendframework/zenddiagnostics": "dev-master"
     }
 }
