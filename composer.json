@@ -1,6 +1,6 @@
 {
     "name": "eoko/zf-mandrill",
-    "description": "zf-mandrill is a ZF2 wrapper for the Mandrill API.",
+    "description": "ZF2 wrapper for the Mandrill API.",
     "license": "BSD-3-Clause",
     "keywords": [
         "eoko",

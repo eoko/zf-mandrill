@@ -2,7 +2,7 @@
 
 ## RESOURCES
 
-If you wish to contribute to Eoko/Console, please be sure to
+If you wish to contribute to eoko/zf-mandrill, please be sure to
 read to the following resources (we apply the same quality than ZF):
 
  -  [Coding Standards](https://github.com/zendframework/zf2/wiki/Coding-Standards)

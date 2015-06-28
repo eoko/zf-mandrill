@@ -38,5 +38,6 @@ class EmailController extends AbstractConsoleController
         } catch (\Exception $e) {
             $this->message()->show('[danger]Something went wrong. Details : ' . $e->getMessage() . '[/danger]');
         }
+        $this->message()->show('[bip/]');
     }
 }
