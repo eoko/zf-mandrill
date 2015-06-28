@@ -16,13 +16,6 @@
         }
     },
 
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/eoko/zf-console"
-        }
-    ],
-
     "require": {
         "php": ">=5.5",
         "eoko/zf-console": "~1.0",
