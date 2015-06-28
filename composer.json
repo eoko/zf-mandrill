@@ -23,6 +23,7 @@
         "zendframework/zend-console": "~2.5",
         "zendframework/zend-servicemanager": "~2.5",
         "zendframework/zenddiagnostics":"~1.0",
+        "zendframework/zftool":"dev-master",
         "mandrill/mandrill": "~1.0"
     },
 
@@ -45,7 +46,5 @@
         "zendframework/zend-json": "~2.5",
         "zendframework/zend-validator": "~2.5",
         "phpunit/phpunit": "^5.0@dev",
-        "zendframework/zftool": "dev-master",
-        "zendframework/zenddiagnostics": "dev-master"
     }
 }
