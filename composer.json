@@ -18,7 +18,7 @@
 
     "require": {
         "php": ">=5.5",
-        "eoko/zf-console": "1.0.0",
+        "eoko/zf-console": "~1.0",
         "zendframework/zend-stdlib": "~2.5",
         "zendframework/zend-console": "~2.5",
         "zendframework/zend-servicemanager": "~2.5",
