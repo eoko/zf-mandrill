@@ -1,7 +1,5 @@
 # CONTRIBUTING
 
-@toto // modify for repo 
-
 ## RESOURCES
 
 If you wish to contribute to Eoko/Console, please be sure to
@@ -10,12 +8,12 @@ read to the following resources (we apply the same quality than ZF):
  -  [Coding Standards](https://github.com/zendframework/zf2/wiki/Coding-Standards)
  -  [Contributor's Guide](http://framework.zend.com/participate/contributor-guide)
 
-If you are working on new features or refactoring [create a proposal](https://github.com/zendframework/zend-console/issues/new).
+If you are working on new features or refactoring [create a proposal](https://github.com/eoko/zf-mandrill/issues/new).
 
 ## Reporting Potential Security Issues
 
 If you have encountered a potential security vulnerability, please **DO NOT** report it on the public
-issue tracker: send it to us at [zf-security@zend.com](mailto:zf-security@zend.com) instead.
+issue tracker: send it to us at [security@eoko.fr](mailto:security@eoko.fr) instead.
 We will work with you to verify the vulnerability and patch it as soon as possible.
 
 When reporting issues, please provide the following information:
@@ -29,24 +27,14 @@ contributors a chance to resolve the vulnerability and issue a new release prior
 to any public exposure; this helps protect users and provides them with a chance
 to upgrade and/or update in order to protect their applications.
 
-For sensitive email communications, please use [our PGP key](http://framework.zend.com/zf-security-pgp-key.asc).
-
 ## RUNNING TESTS
-
-> ### Note: testing versions prior to 2.4
->
-> This component originates with Zend Framework 2. During the lifetime of ZF2,
-> testing infrastructure migrated from PHPUnit 3 to PHPUnit 4. In most cases, no
-> changes were necessary. However, due to the migration, tests may not run on
-> versions < 2.4. As such, you may need to change the PHPUnit dependency if
-> attempting a fix on such a version.
 
 To run tests:
 
 - Clone the repository:
 
   ```console
-  $ git clone git@github.com:zendframework/zend-console.git
+  $ git clone git@github.com:eoko/zf-mandrill.git
   $ cd
   ```
 
@@ -101,19 +89,19 @@ pull your work into the master repository. We recommend using
 [GitHub](https://github.com), as that is where the component is already hosted.
 
 1. Setup a [GitHub account](http://github.com/), if you haven't yet
-2. Fork the repository (http://github.com/zendframework/zend-console)
+2. Fork the repository (http://github.com/eoko/zf-mandrill)
 3. Clone the canonical repository locally and enter it.
 
    ```console
-   $ git clone git://github.com:zendframework/zend-console.git
-   $ cd zend-console
+   $ git clone git://github.com:eoko/zf-mandrill.git
+   $ cd zf-mandrill
    ```
 
 4. Add a remote to your fork; substitute your GitHub username in the command
    below.
 
    ```console
-   $ git remote add {username} git@github.com:{username}/zend-console.git
+   $ git remote add {username} git@github.com:{username}/zf-mandrill.git
    $ git fetch {username}
    ```
 
@@ -176,7 +164,7 @@ Delta compression using up to 2 threads.
 Compression objects: 100% (18/18), done.
 Writing objects: 100% (20/20), 8.19KiB, done.
 Total 20 (delta 12), reused 0 (delta 0)
-To ssh://git@github.com/{username}/zend-console.git
+To ssh://git@github.com/{username}/zf-mandrill.git
    b5583aa..4f51698  HEAD -> master
 ```
 
@@ -185,15 +173,15 @@ To send a pull request, you have two options.
 If using GitHub, you can do the pull request from there. Navigate to
 your repository, select the branch you just created, and then select the
 "Pull Request" button in the upper right. Select the user/organization
-"zendframework" as the recipient.
+"eoko" as the recipient.
 
 If using your own repository - or even if using GitHub - you can use `git
 format-patch` to create a patchset for us to apply; in fact, this is
 **recommended** for security-related patches. If you use `format-patch`, please
 send the patches as attachments to:
 
--  zf-devteam@zend.com for patches without security implications
--  zf-security@zend.com for security patches
+-  patch@eoko.fr for patches without security implications
+-  security@eoko.fr for security patches
 
 #### What branch to issue the pull request against?
 

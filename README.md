@@ -5,13 +5,14 @@
 
 ## Introduction
 
-zf-mandrill is a simple wrapper for the Mandrill API. It permit to use the Mandrill API using a pre-configure client in a zend-framework context.
+zf-mandrill is a simple wrapper for the Mandrill API. It permit to use the Mandrill API using a pre-configure client in 
+a Zend Framework context.
 
 With this module, you can :
 
-- pre-configure Mandrill
+- pre-configure Mandrill client
 - check your configuration using zend-diagnostic
-- send email from CLI (test purpose)
+- send email from CLI (for testing purpose)
 - send email directly from controller
 - use email service to send email
 
@@ -28,14 +29,15 @@ zf-mandrill works with [Composer](http://getcomposer.org). Make sure you have th
 
 ## Configuration
 
-Copy/Paster in your local configuration `config/mandrill.local.php.dist` and rename it to `mandrill.local.php`. You can see in all informations needs for configuration.
+Copy/Paste in your local configuration `config/mandrill.local.php.dist` and rename it to `mandrill.local.php`. 
+There are all the informations required for zf-mandrill configuration.
 
 ## Service Available
 
-The following service are pre-configure :
+The following services are pre-configured in the service locator :
 
-- Mandrill Client : `eoko.mandrill.client`
-- Email Service : `eoko.mandrill.service.email`
+- Mandrill client : `eoko.mandrill.client`
+- Email service : `eoko.mandrill.service.email`
 
 ## Command
 
