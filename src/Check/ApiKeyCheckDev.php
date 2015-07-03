@@ -25,7 +25,7 @@ class ApiKeyCheckDev extends AbstractCheck implements ServiceLocatorAwareInterfa
         try {
             /** @var \Mandrill $client */
             $client = $this->getServiceLocator()->get('eoko.mandrill.client');
-            if( strpos($client->apikey, '-')) {
+            if (strpos($client->apikey, '-')) {
                 throw new TestModeException('You key is for test purpose.');
             }
             return new Success('Current Key is "' . $client->apikey . '"');
