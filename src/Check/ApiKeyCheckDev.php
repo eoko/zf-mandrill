@@ -28,7 +28,7 @@ class ApiKeyCheckDev extends AbstractCheck implements ServiceLocatorAwareInterfa
             if (strpos($client->apikey, '-')) {
                 throw new TestModeException('You key is for test purpose.');
             }
-            return new Success('Current Key is "' . $client->apikey . '"');
+            return new Success('Your key is valid for production.');
         } catch (TestModeException $e) {
             return new Warning($e->getMessage());
         } catch (\Exception $e) {
