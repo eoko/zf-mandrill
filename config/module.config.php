@@ -9,6 +9,7 @@ return [
         'invokables' => [
             'eoko.mandrill.check.apikey' => 'Eoko\Mandrill\Check\ApiKeyCheck',
             'eoko.mandrill.check.subaccount' => 'Eoko\Mandrill\Check\SubaccountCheck',
+            'eoko.mandrill.check.apiKeyCheckDev' => 'Eoko\Mandrill\Check\ApiKeyCheckDev',
             'eoko.mandrill.check.email' => 'Eoko\Mandrill\Check\EmailCheck',
         ]
     ],
@@ -28,6 +29,7 @@ return [
     'diagnostics' => [
         'Eoko' => [
             'Mandrill ApiKey' => 'eoko.mandrill.check.apikey',
+            'Mandrill Dev Mode' => 'eoko.mandrill.check.apiKeyCheckDev',
             'Mandrill Subaccount' => 'eoko.mandrill.check.subaccount',
         ]
     ],
