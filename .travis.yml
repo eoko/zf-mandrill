@@ -25,9 +25,9 @@ matrix:
   allow_failures:
     - php: 7
     - php: hhvm
-
+    
 notifications:
-  slack: eoko:xD7FhK32T6o2xDti5TCXOYps
+  slack: eokopublic:MUdBjmYqBAi61u2m6xM4XxvD
 
 before_install:
   - if [[ $EXECUTE_TEST_COVERALLS != 'true' ]]; then phpenv config-rm xdebug.ini || return 0 ; fi
