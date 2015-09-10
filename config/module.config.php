@@ -1,17 +1,26 @@
 <?php
 
+use Eoko\Mandrill\Check\ApiKeyCheck;
+use Eoko\Mandrill\Check\ApiKeyCheckDev;
+use Eoko\Mandrill\Check\SubaccountCheck;
+use Mandrill as MandrillClient;
+
 return [
     'service_manager' => [
         'factories' => [
-            'eoko.mandrill.client' => 'Eoko\Mandrill\Factory\ClientFactory',
-            'eoko.mandrill.service.email' => 'Eoko\Mandrill\Factory\MailServiceFactory',
+             MandrillClient::class => 'Eoko\Mandrill\Factory\ClientFactory',
+            'Eoko\Mandrill\Service\Email' => 'Eoko\Mandrill\Factory\MailServiceFactory',
         ],
         'invokables' => [
-            'eoko.mandrill.check.apikey' => 'Eoko\Mandrill\Check\ApiKeyCheck',
-            'eoko.mandrill.check.subaccount' => 'Eoko\Mandrill\Check\SubaccountCheck',
-            'eoko.mandrill.check.apiKeyCheckDev' => 'Eoko\Mandrill\Check\ApiKeyCheckDev',
-            'eoko.mandrill.check.email' => 'Eoko\Mandrill\Check\EmailCheck',
-        ]
+            ApiKeyCheck::class => ApiKeyCheck::class,
+            ApiKeyCheckDev::class => ApiKeyCheckDev::class,
+            SubaccountCheck::class => SubaccountCheck::class,
+        ],
+        'delegators' => [
+            'MvcTranslator' => [
+                'Eoko\Mandrill\Delegator\TranslatorDelegator',
+            ],
+        ],
     ],
 
     'controllers' => [
@@ -26,11 +35,30 @@ return [
         ]
     ],
 
+    'slm_queue' => [
+        'queue_manager' => [
+            'factories' => [
+                'user' => 'SlmQueueSqs\Factory\SqsQueueFactory'
+            ]
+        ],
+        'queues' => [
+            'user' => [
+                'queueUrl' => 'https://sqs.eu-west-1.amazonaws.com/591955746157/demo'
+            ]
+        ],
+        'job_manager' => [
+            'factories' => [
+                'Eoko\Mandrill\Job\SendEmailJob' => 'Eoko\Mandrill\Factory\SendEmailJobFactory',
+            ],
+        ],
+    ],
+
+
     'diagnostics' => [
         'Eoko' => [
-            'Mandrill ApiKey' => 'eoko.mandrill.check.apikey',
-            'Mandrill Dev Mode' => 'eoko.mandrill.check.apiKeyCheckDev',
-            'Mandrill Subaccount' => 'eoko.mandrill.check.subaccount',
+            'Mandrill ApiKey' => ApiKeyCheck::class,
+            'Mandrill Dev Mode' => ApiKeyCheckDev::class,
+            'Mandrill Subaccount' => SubaccountCheck::class,
         ]
     ],
 

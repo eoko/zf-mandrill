@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: merlin
- * Date: 26/06/15
- * Time: 19:33
- */
 
 namespace Eoko\Mandrill\Check;
 
@@ -24,7 +18,7 @@ class SubaccountCheck extends AbstractCheck implements ServiceLocatorAwareInterf
     {
         try {
             /** @var MailService $service */
-            $service = $this->getServiceLocator()->get('eoko.mandrill.service.email');
+            $service = $this->getServiceLocator()->get('Eoko\Mandrill\Service\Email');
 
             $subaccount = $service->getDefaultSubaccount();
 

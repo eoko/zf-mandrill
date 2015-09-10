@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: merlin
- * Date: 26/06/15
- * Time: 19:33
- */
 
 namespace Eoko\Mandrill\Check;
 
-use Eoko\Mandrill\Exception\TestModeException;
+use Exception;
+use Mandrill;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
 use Zend\ServiceManager\ServiceLocatorAwareTrait;
 use ZendDiagnostics\Check\AbstractCheck;
@@ -23,15 +18,15 @@ class ApiKeyCheckDev extends AbstractCheck implements ServiceLocatorAwareInterfa
     public function check()
     {
         try {
-            /** @var \Mandrill $client */
-            $client = $this->getServiceLocator()->get('eoko.mandrill.client');
+            /** @var Mandrill $client */
+            $client = $this->getServiceLocator()->get(Mandrill::class);
+            $client->users->info();
+
             if (strpos($client->apikey, '-')) {
-                throw new TestModeException('You key is for test purpose.');
+                return new Warning('You key is for test purpose.');
             }
             return new Success('Your key is valid for production.');
-        } catch (TestModeException $e) {
-            return new Warning($e->getMessage());
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return new Failure($e->getMessage());
         }
     }

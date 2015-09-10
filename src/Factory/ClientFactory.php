@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: merlin
- * Date: 16/06/15
- * Time: 21:45
- */
 
 namespace Eoko\Mandrill\Factory;
 
@@ -23,7 +17,7 @@ class ClientFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $config = $serviceLocator->get('configuration');
+        $config = $serviceLocator->get('Config');
         $key = (isset($config['eoko']['mandrill']['apiKey'])) ? $config['eoko']['mandrill']['apiKey'] : null;
 
         return new Mandrill($key);

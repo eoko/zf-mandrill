@@ -3,6 +3,7 @@
 namespace Eoko\Mandrill\Factory;
 
 use Eoko\Mandrill\Service\MailService;
+use Mandrill;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -17,7 +18,7 @@ class MailServiceFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $client = $serviceLocator->get('eoko.mandrill.client');
+        $client = $serviceLocator->get(Mandrill::class);
 
         $config = $serviceLocator->get('Config');
         $config = $config['eoko']['mandrill'];

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: merlin
- * Date: 26/06/15
- * Time: 22:19
- */
 
 namespace Eoko\Mandrill\Factory;
 
@@ -22,6 +16,6 @@ class EmailControllerFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return new EmailController($serviceLocator->getServiceLocator()->get('eoko.mandrill.service.email'));
+        return new EmailController($serviceLocator->getServiceLocator()->get('Eoko\Mandrill\Service\Email'));
     }
 }

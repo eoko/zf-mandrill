@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: merlin
- * Date: 27/06/15
- * Time: 16:18
- */
 
-namespace Eoko\Mandrill\Plugin;
+namespace Eoko\Mandrill\Factory;
 
+use Eoko\Mandrill\Plugin\EmailPlugin;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -21,7 +16,7 @@ class EmailPluginFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $service = $serviceLocator->getServiceLocator()->get('eoko.mandrill.service.email');
+        $service = $serviceLocator->getServiceLocator()->get('Eoko\Mandrill\Service\Email');
         return new EmailPlugin($service);
     }
 }

@@ -39,7 +39,7 @@ There are all the informations required for zf-mandrill configuration.
 The following services are pre-configured in the service locator :
 
 - Mandrill client : `eoko.mandrill.client`
-- Email service : `eoko.mandrill.service.email`
+- Email service : `Eoko\Mandrill\Service\Email`
 
 ## Command
 
