@@ -3,6 +3,7 @@
 namespace Eoko\Mandrill\Listener;
 
 use Eoko\Mandrill\Event\EmailEvent;
+use Eoko\Mandrill\Job\SendEmailJob;
 use Eoko\Mandrill\Service\MailService;
 use Eoko\Mandrill\Struct\MessageStruct;
 use SlmQueue\Queue\QueueInterface;
@@ -56,7 +57,7 @@ class SendEmailListener implements ListenerAggregateInterface
     {
         /** @var QueueInterface $queue */
         $queue = $this->queues->get('user');
-        $emailJob = $queue->getJobPluginManager()->get('Eoko\Mandrill\Job\SendEmailJob');
+        $emailJob = $queue->getJobPluginManager()->get(SendEmailJob::class);
         $email = $e->getParams();
 
         $html = $this->renderer->render($email->getHtmlTemplate(), $email->getVars());

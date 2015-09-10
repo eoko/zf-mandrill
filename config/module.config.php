@@ -4,6 +4,7 @@ use Eoko\Mandrill\Check\ApiKeyCheck;
 use Eoko\Mandrill\Check\ApiKeyCheckDev;
 use Eoko\Mandrill\Check\SubaccountCheck;
 use Mandrill as MandrillClient;
+use Eoko\Mandrill\Job\SendEmailJob;
 
 return [
     'service_manager' => [
@@ -48,7 +49,7 @@ return [
         ],
         'job_manager' => [
             'factories' => [
-                'Eoko\Mandrill\Job\SendEmailJob' => 'Eoko\Mandrill\Factory\SendEmailJobFactory',
+                SendEmailJob::class => 'Eoko\Mandrill\Factory\SendEmailJobFactory',
             ],
         ],
     ],
