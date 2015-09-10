@@ -1,8 +1,6 @@
 <?php
 
-namespace Mandrill\Struct;
-
-use Eoko\Mandrill\Struct\StructInterface;
+namespace Eoko\Mandrill\Struct;
 
 class RecipientStruct implements StructInterface
 {

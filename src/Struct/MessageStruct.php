@@ -2,8 +2,6 @@
 
 namespace Eoko\Mandrill\Struct;
 
-use Mandrill\Struct\AttachmentSruct;
-use Mandrill\Struct\RecipientStruct;
 use Zend\Stdlib\Hydrator\ObjectProperty;
 
 class MessageStruct implements StructInterface
