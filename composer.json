@@ -32,7 +32,7 @@
         "zendframework/zend-servicemanager": "~2.5",
         "zendframework/zend-view": "^2.5@dev",
         "mandrill/mandrill": "~1.0",
-        "slm/queue": "^0.5.0@dev"
+        "slm/queue": "^0.4"
     },
 
     "require-dev": {
